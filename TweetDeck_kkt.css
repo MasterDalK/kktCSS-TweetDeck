@@ -1,205 +1,719 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-/* TEXT */
-
-.txt-mute { color: #8e9956; }
-
-.txt-mute a:not(:hover):not(:focus),
-.nbfc {
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+html,
+html.dark {
+  /* Generic and large group Declarations */
+  /* Backgrounds */
+  /* Column general */
+  /* Sidebar (Remainder) */
+  /* Muted Text */
+  /* Statuses */
+  /* Modals & Profiles */
+  /* END */
+}
+html p,
+html .color-twitter-dark-gray,
+html .compose-text,
+html.dark p,
+html.dark .color-twitter-dark-gray,
+html.dark .compose-text {
+  color: #7b5d4d;
+}
+html a,
+html .color-twitter-darker-gray,
+html .other-replies,
+html.dark a,
+html.dark .color-twitter-darker-gray,
+html.dark .other-replies {
   color: #8e9956;
 }
-
-div { font-family: "Roboto"; -webkit-font-smoothing: none; }
-
-h1 { font-family: "Segoe UI", "Roboto"; font-weight: bold; }
-
-a,
-.prf .lst-profile a:hover i,
-.prf-stats a:hover,
-.prf-stats a:hover strong,
-.is-inverted-dark a,
-.fullname.link-complex-target, .account-link, .other-replies-link {
-    color: #ed649c;
-    text-decoration: none
+html a .other-replies-link,
+html .color-twitter-darker-gray .other-replies-link,
+html .other-replies .other-replies-link,
+html.dark a .other-replies-link,
+html.dark .color-twitter-darker-gray .other-replies-link,
+html.dark .other-replies .other-replies-link {
+  color: #ed649c;
 }
-
-a:hover,
-a:focus,
-a:active,
-.prf .lst-profile a:hover span,
-.is-inverted-dark a:hover,
-.is-inverted-dark a:focus,
-.is-inverted-dark a:active,
-.account-link:hover, .account-link:focus, .account-link:active, .fullname.link-complex-target:hover, .fullname.link-complex-target:focus, .fullname.link-complex-target:active, .other-replies-link:hover  {
-    color: #ed649c;
-    text-decoration: underline;
+html div,
+html.dark div {
+  font-family: "Roboto";
+  -webkit-font-smoothing: none;
 }
-
-p { color: #8b6d5d; }
-.column-head-title, .column-type-icon { color: #6a4643; }
-
-.js-quoted-tweet-text.with-linebreaks { color: #ad9588; }
-
-
-/* PROFILE */
-
-.prf-meta,
-.modal-content,
-.social-proof-container {
-    background: rbga(255,255,255,0.8);
-    border: 1px solid #8b6d5d;
+html h1,
+html.dark h1 {
+  font-family: "Segoe UI", "Roboto";
+  font-weight: bold;
 }
-.prf-stats a,
-.prf-stats a strong,
-.prf .lst-profile span,
-.prf .lst-profile i{
-    color: #8e9956;
+html a[rel=hashtag],
+html a[rel=user],
+html .link-complex-target,
+html.dark a[rel=hashtag],
+html.dark a[rel=user],
+html.dark .link-complex-target {
+  color: #ed649c;
 }
-
-.prf-bio, .prf .location { color: #FFF; }
-
-/* ICONS */
-
-.icon-unread-color, .column-nav-updates, .is-new .column-type-icon, .sprite-column-update, .icon-follow-color, .icon-list-color, .icon-mention-color, .icon-unread-color, .icon-remove-color, .icon-submit-color, .icon-twitter-blue-color {
-    color: #6a4643;
+html img.tweet-avatar,
+html img.avatar,
+html.dark img.tweet-avatar,
+html.dark img.avatar {
+  border-radius: 8px;
+  border: solid 2px #e1c152;
 }
-.prf-img .avatar {
-    border-radius: 1px;
+html .app-columns-container,
+html.dark .app-columns-container {
+  background: url("data:image/svg+xml,%3Csvg xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns='http://www.w3.org/2000/svg' xmlns:cc='http://creativecommons.org/ns%23' xmlns:dc='http://purl.org/dc/elements/1.1/' height='114' viewBox='0 0 80 114' width='80' version='1.1'%3E %3Crect height='114' width='80' y='0' x='0' fill='%23ECF5BE'/%3E %3Cpath fill='%23DDEB95' d='m0 57 40-57 40 57-40 57z'/%3E %3C/svg%3E");
+  background-attachment: fixed;
 }
-/* VARIOUS BUTTONS & UI ELEMENTS */
-
-.btn, .is-disabled, .attach-compose-buttons .tweet-button { background-color: #bfe755; }
-.btn-compose { background-color: #bfe755; }
-.btn:hover { background-color: #85a13b; }
-.app-header, .app-navigator, .app-title, .compose {
-  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiBoZWlnaHQ9IjI4IiB3aWR0aD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyOCI+DQo8cmVjdCBoZWlnaHQ9IjI4IiB3aWR0aD0iMjAiIHk9IjAiIHg9IjAiIGZpbGw9IiNlNTZjYWMiLz4NCjxwYXRoIGQ9Im0wIDE0IDEwLTE0IDEwIDE0LTEwIDE0eiIgZmlsbD0iI2Q4NGE5ZCIvPg0KPC9zdmc+');
+html .app-header,
+html.dark .app-header {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='28' width='20'%3E%3Crect height='28' width='20' y='0' x='0' fill='%23E46BAC'/%3E%3Cpath d='m0 14 10-14 10 14-10 14z' fill='%23E055A0'/%3E%3C/svg%3E");
 }
-.compose { border-left: solid 1px black; }
-
-.column-nav-item { background: none; }
-
-.app-search-input, .app-search-fake { background: #d0e093; }
-
-.tweet-actions .icon-favorite, .tweet-actions .icon-retweet, .tweet-actions .icon-reply, .tweet-actions .icon-more {
+html .app-navigator,
+html .app-title,
+html .old-composer-footer,
+html.dark .app-navigator,
+html.dark .app-title,
+html.dark .old-composer-footer {
+  background: transparent;
+}
+html .bg-color-twitter-white,
+html.dark .bg-color-twitter-white {
+  background-color: #ecf5be;
+}
+html .column-panel,
+html .column,
+html .column-background-fill,
+html.dark .column-panel,
+html.dark .column,
+html.dark .column-background-fill {
+  background: rgba(172, 200, 31, 0.3);
+}
+html .column,
+html.dark .column {
+  /* Detailed Conversations */
+}
+html .column-header,
+html.dark .column-header {
+  background: #d4e195;
+  color: #7b5d4d;
+  border-bottom: none;
+}
+html .column-header-link,
+html.dark .column-header-link {
+  color: #7b5d4d;
+}
+html .column-header .column-type-icon,
+html.dark .column-header .column-type-icon {
+  color: #7b5d4d;
+}
+html .column .with-column-divider-bottom,
+html.dark .column .with-column-divider-bottom {
+  border-color: #e1c152;
+}
+html .column-options,
+html.dark .column-options {
+  background: #f6fae1;
+}
+html .column-options .accordion,
+html.dark .column-options .accordion {
+  color: #7b5d4d;
+}
+html .column-options .accordion .facet-type,
+html.dark .column-options .accordion .facet-type {
+  border-color: #e1c152;
+}
+html .column-options .accordion .facet-type.is-active,
+html.dark .column-options .accordion .facet-type.is-active {
+  background: transparent;
+}
+html .column-options .accordion .facet-type .accordion-header,
+html.dark .column-options .accordion .facet-type .accordion-header {
+  color: #7b5d4d;
+}
+html .column-options .button-tray,
+html.dark .column-options .button-tray {
+  background-color: transparent;
+}
+html .column .attribution,
+html.dark .column .attribution {
+  color: #7b5d4d;
+}
+html .column .scroll-conversation,
+html.dark .column .scroll-conversation {
+  background: transparent;
+}
+html .column .scroll-conversation .item-box,
+html.dark .column .scroll-conversation .item-box {
+  margin-bottom: 3px;
+}
+html .column .scroll-conversation .tweet-detail-wrapper,
+html.dark .column .scroll-conversation .tweet-detail-wrapper {
+  background: linear-gradient(to bottom, #fcfae5 0%, #fcfae5 65%, #f9f3b5 100%);
+  margin-top: 0;
+  border: solid 2px #e1c152;
+  padding-top: 4px;
+  margin-right: 2px;
+  border-radius: 8px;
+}
+html .column .scroll-conversation .tweet-detail-actions,
+html.dark .column .scroll-conversation .tweet-detail-actions {
+  border-top: 1px solid #e1c152;
+}
+html .column .scroll-conversation .tweet-detail-action,
+html.dark .column .scroll-conversation .tweet-detail-action {
+  color: #ae827f !important;
+}
+html .column .scroll-conversation .tweet-stats,
+html.dark .column .scroll-conversation .tweet-stats {
+  border-top: 1px solid #e1c152;
+}
+html .column .scroll-conversation .detail-view-inline,
+html.dark .column .scroll-conversation .detail-view-inline {
+  border: none;
+  margin-top: 8px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 !important;
+}
+html .column .scroll-conversation .detail-view-inline-text,
+html.dark .column .scroll-conversation .detail-view-inline-text {
+  border: 1px solid #e1c152;
+  background-color: #ecf5be;
+  color: #7b5d4d;
+}
+html .column .scroll-conversation .inline-reply,
+html.dark .column .scroll-conversation .inline-reply {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #7b5d4d;
+}
+html .column .thread,
+html.dark .column .thread {
+  background-color: #7b5d4d;
+}
+html .column-nav,
+html.dark .column-nav {
+  /* Sidebar */
+}
+html .column-nav-item,
+html.dark .column-nav-item {
+  background: transparent;
+  color: #7b5d4d;
+  text-shadow: -1px -1px 0 #f5e33a, 1px -1px 0 #f5e33a, -1px 1px 0 #f5e33a, 1px 1px 0 #f5e33a;
+}
+html .column-nav-item:hover,
+html.dark .column-nav-item:hover {
+  text-shadow: none;
+}
+html .column-nav-link, html .column-nav-updates,
+html.dark .column-nav-link,
+html.dark .column-nav-updates {
+  color: #7b5d4d;
+}
+html .is-new .column-header .column-type-icon,
+html.dark .is-new .column-header .column-type-icon {
+  color: #e46bac;
+}
+html .app-search-fake,
+html.dark .app-search-fake {
+  color: #7b5d4d;
+  border: solid 1px #7b5d4d;
+}
+html .app-nav-link, html .app-nav-tab,
+html.dark .app-nav-link,
+html.dark .app-nav-tab {
+  color: #7b5d4d;
+  text-shadow: -1px -1px 0 #f5e33a, 1px -1px 0 #f5e33a, -1px 1px 0 #f5e33a, 1px 1px 0 #f5e33a;
+}
+html .app-nav-link:hover, html .app-nav-tab:hover,
+html.dark .app-nav-link:hover,
+html.dark .app-nav-tab:hover {
+  color: #6a4643;
+  text-shadow: none;
+  background: rgba(255, 255, 255, 0.5);
+}
+html .Button,
+html button,
+html.dark .Button,
+html.dark button {
+  background-color: #e46bac;
+  border-color: #e46bac;
   color: #6a4643;
 }
-
-
-/*  COLUMNS */
-
-.column {
-    background: rgba(0,0,0,0.1);
-    top: 0px;
-    margin: 4px;
-    border: none;
+html .Button:hover,
+html button:hover,
+html.dark .Button:hover,
+html.dark button:hover {
+  background-color: #ec96c4;
 }
-
-.item-box {
-  padding: 2px 2px;
-}
-
-.scroll-conversation, .stream-item, .item-box, .tweet-detail-wrapper {
-  background: transparent;
-  border: none;
-}
-
-.tweet, .tweet-detail {
-  /* Old browsers */
-  background: rgb(252, 252, 225);
-  /* FF3.6-15 */
-  background: -moz-linear-gradient(top, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-linear-gradient(top, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  background: linear-gradient(to bottom, rgba(252, 252, 225, 1) 0%, rgba(252, 252, 225, 1) 65%, rgba(252, 252, 225, 1) 65%, rgba(249, 240, 174, 1) 100%);
-  /* IE6-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfce1', endColorstr='#f9f0ae', GradientType=0);
+html .Button.Button--primary, html .Button.Button--link,
+html button.Button--primary,
+html button.Button--link,
+html.dark .Button.Button--primary,
+html.dark .Button.Button--link,
+html.dark button.Button--primary,
+html.dark button.Button--link {
+  background-color: #acc81f;
+  border-color: #acc81f;
   border-radius: 8px;
-  margin-bottom: 8px;
+}
+html .Button.Button--primary.is-disabled, html .Button.Button--link.is-disabled,
+html button.Button--primary.is-disabled,
+html button.Button--link.is-disabled,
+html.dark .Button.Button--primary.is-disabled,
+html.dark .Button.Button--link.is-disabled,
+html.dark button.Button--primary.is-disabled,
+html.dark button.Button--link.is-disabled {
+  background-color: #7e8364;
+  border-color: #7e8364;
+}
+html .Button.Button--primary:hover, html .Button.Button--link:hover,
+html button.Button--primary:hover,
+html button.Button--link:hover,
+html.dark .Button.Button--primary:hover,
+html.dark .Button.Button--link:hover,
+html.dark button.Button--primary:hover,
+html.dark button.Button--link:hover {
+  background-color: #c5e139;
+  border-color: #acc81f;
+}
+html .btn-on-blue,
+html.dark .btn-on-blue {
+  background-color: #d4e195;
+  color: #7b5d4d;
+}
+html .btn-on-blue:hover,
+html.dark .btn-on-blue:hover {
+  background-color: #d2e766;
+  color: #7b5d4d;
+}
+html .btn-on-blue:active,
+html.dark .btn-on-blue:active {
+  background-color: #c5e139;
+  color: #7b5d4d;
+  box-shadow: none;
+}
+html .btn-on-dark,
+html.dark .btn-on-dark {
+  background-color: #e46bac;
+}
+html .btn-on-dark:hover,
+html.dark .btn-on-dark:hover {
+  background-color: #dc4094;
+  color: #FFF;
+  box-shadow: none;
+}
+html .btn-on-dark:active,
+html.dark .btn-on-dark:active {
+  background-color: #dc4094;
+  color: #FFF;
+  box-shadow: none;
+}
+html .compose,
+html.dark .compose {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='28' width='20'%3E%3Crect height='28' width='20' y='0' x='0' fill='%23E46BAC'/%3E%3Cpath d='m0 14 10-14 10 14-10 14z' fill='%23E055A0'/%3E%3C/svg%3E");
+  color: #7b5d4d;
+}
+html .compose-accounts .compose-account img,
+html.dark .compose-accounts .compose-account img {
+  border-radius: 8px;
+  border: solid 2px #e1c152;
+}
+html .compose-text-title, html .compose-message-header,
+html.dark .compose-text-title,
+html.dark .compose-message-header {
+  color: #6a4643;
+}
+html .attach-compose-buttons button.tweet-button,
+html .attach-compose-buttons .Button.tweet-button,
+html.dark .attach-compose-buttons button.tweet-button,
+html.dark .attach-compose-buttons .Button.tweet-button {
+  background: rgba(255, 255, 255, 0.4);
+  color: #6a4643;
+}
+html .txt-mute,
+html .stat-word,
+html.dark .txt-mute,
+html.dark .stat-word {
+  color: #b0b982;
+}
+html .txt-mute p,
+html .stat-word p,
+html.dark .txt-mute p,
+html.dark .stat-word p {
+  color: #a5826f;
+}
+html .txt-mute.username,
+html .stat-word.username,
+html.dark .txt-mute.username,
+html.dark .stat-word.username {
+  /* NOT ACTUALLY MUTED */
+  color: #8e9956;
+}
+html .txt-mute a,
+html .stat-word a,
+html.dark .txt-mute a,
+html.dark .stat-word a {
+  color: #b0b982;
+}
+html .txt-mute a[rel=user],
+html .txt-mute a:not(:hover):not(:focus),
+html .txt-mute .link-complex-target,
+html .stat-word a[rel=user],
+html .stat-word a:not(:hover):not(:focus),
+html .stat-word .link-complex-target,
+html.dark .txt-mute a[rel=user],
+html.dark .txt-mute a:not(:hover):not(:focus),
+html.dark .txt-mute .link-complex-target,
+html.dark .stat-word a[rel=user],
+html.dark .stat-word a:not(:hover):not(:focus),
+html.dark .stat-word .link-complex-target {
+  color: #f5a9c8;
+}
+html .item-box,
+html.dark .item-box {
+  padding: 4px 10px;
+  margin-bottom: 6px;
+}
+html .item-box-full-bleed.js-media.margin-tm,
+html.dark .item-box-full-bleed.js-media.margin-tm {
+  margin: -20px -10px 0px !important;
+  border-bottom: solid 2px #e1c152;
+}
+html .item-box .margin-tm,
+html.dark .item-box .margin-tm {
+  margin-top: 0 !important;
+}
+html .item-box .margin-t--20,
+html.dark .item-box .margin-t--20 {
+  margin-top: 0;
+}
+html .stream-item,
+html .stream-item:not(:hover),
+html .stream-item:not(.is-selected-tweet),
+html.dark .stream-item,
+html.dark .stream-item:not(:hover),
+html.dark .stream-item:not(.is-selected-tweet) {
+  background: transparent;
+  border-bottom: none;
+}
+html .stream-item .nbfc,
+html .stream-item:not(:hover) .nbfc,
+html .stream-item:not(.is-selected-tweet) .nbfc,
+html.dark .stream-item .nbfc,
+html.dark .stream-item:not(:hover) .nbfc,
+html.dark .stream-item:not(.is-selected-tweet) .nbfc {
+  color: #8e9956;
+}
+html .stream-item .tweet,
+html .stream-item:not(:hover) .tweet,
+html .stream-item:not(.is-selected-tweet) .tweet,
+html.dark .stream-item .tweet,
+html.dark .stream-item:not(:hover) .tweet,
+html.dark .stream-item:not(.is-selected-tweet) .tweet {
+  padding-top: 6px;
+  padding-bottom: 4px;
+  margin-right: -6px;
+  background: linear-gradient(to bottom, #fcfae5 0%, #fcfae5 65%, #f9f3b5 100%);
+  border-radius: 8px;
   border: solid 2px #e1c152;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-  padding: 8px 8px 8px 12px;
 }
-.tweet {
-  margin-right: 2px;
-  margin-left: 64px;
-  width: 207px;
+html .stream-item .tweet-footer,
+html .stream-item:not(:hover) .tweet-footer,
+html .stream-item:not(.is-selected-tweet) .tweet-footer,
+html.dark .stream-item .tweet-footer,
+html.dark .stream-item:not(:hover) .tweet-footer,
+html.dark .stream-item:not(.is-selected-tweet) .tweet-footer {
+  margin-top: 1px;
+  margin-bottom: 2px;
 }
-
-.tweet-detail {
+html .stream-item .tweet-img,
+html .stream-item:not(:hover) .tweet-img,
+html .stream-item:not(.is-selected-tweet) .tweet-img,
+html.dark .stream-item .tweet-img,
+html.dark .stream-item:not(:hover) .tweet-img,
+html.dark .stream-item:not(.is-selected-tweet) .tweet-img {
+  margin-left: -42px;
 }
-
-.tweet::before {
-  content: '';
-  display: block;
-  width: 0;
-  height: 0;
-  position: absolute;
-  border-style: solid;
-  border-width: 10px;
-  border-color: transparent #e1c152 transparent transparent;
-  left: 46px;
-  top: 14px;
-  transform: scaleY(0.66);
-}
-.tweet::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 0;
-  position: absolute;
-  border-style: solid;
-  border-width: 10px;
-  border-color: transparent #fcfce0 transparent transparent;
-  left: 48px;
-  top: 14px;
-  transform: scaleY(0.66);
-}
-
-.detail-view-inline {
-  margin-top: -18px;
-}
-
-.tweet.txt-mute:after, .tweet.txt-mute:before {
-  margin-top: 20px;
-}
-
-/* avatar */
-
-.tweet-avatar {
-  margin-left: -19px;
-  top: -7px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+html .stream-item .tweet-avatar,
+html .stream-item:not(:hover) .tweet-avatar,
+html .stream-item:not(.is-selected-tweet) .tweet-avatar,
+html.dark .stream-item .tweet-avatar,
+html.dark .stream-item:not(:hover) .tweet-avatar,
+html.dark .stream-item:not(.is-selected-tweet) .tweet-avatar {
+  border-radius: 8px;
   border: solid 2px #e1c152;
 }
-.avatar.size24 {
-  margin-top: 26px;
+html .stream-item .tweet-timestamp,
+html .stream-item:not(:hover) .tweet-timestamp,
+html .stream-item:not(.is-selected-tweet) .tweet-timestamp,
+html.dark .stream-item .tweet-timestamp,
+html.dark .stream-item:not(:hover) .tweet-timestamp,
+html.dark .stream-item:not(.is-selected-tweet) .tweet-timestamp {
+  margin-right: 5px;
+}
+html .stream-item .tweet-timestamp a,
+html .stream-item:not(:hover) .tweet-timestamp a,
+html .stream-item:not(.is-selected-tweet) .tweet-timestamp a,
+html.dark .stream-item .tweet-timestamp a,
+html.dark .stream-item:not(:hover) .tweet-timestamp a,
+html.dark .stream-item:not(.is-selected-tweet) .tweet-timestamp a {
+  color: #8e9956;
+}
+html .stream-item .tweet-body,
+html .stream-item:not(:hover) .tweet-body,
+html .stream-item:not(.is-selected-tweet) .tweet-body,
+html.dark .stream-item .tweet-body,
+html.dark .stream-item:not(:hover) .tweet-body,
+html.dark .stream-item:not(.is-selected-tweet) .tweet-body {
+  margin-right: 5px;
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+html .stream-item .tweet-message .l-table,
+html .stream-item:not(:hover) .tweet-message .l-table,
+html .stream-item:not(.is-selected-tweet) .tweet-message .l-table,
+html.dark .stream-item .tweet-message .l-table,
+html.dark .stream-item:not(:hover) .tweet-message .l-table,
+html.dark .stream-item:not(.is-selected-tweet) .tweet-message .l-table {
+  margin-top: -20px;
+}
+html .stream-item .quoted-tweet,
+html .stream-item:not(:hover) .quoted-tweet,
+html .stream-item:not(.is-selected-tweet) .quoted-tweet,
+html.dark .stream-item .quoted-tweet,
+html.dark .stream-item:not(:hover) .quoted-tweet,
+html.dark .stream-item:not(.is-selected-tweet) .quoted-tweet {
+  border: solid 1px #e1c152;
+  border-color: #e1c152;
+}
+html .stream-item.gap-chirp,
+html .stream-item:not(:hover).gap-chirp,
+html .stream-item:not(.is-selected-tweet).gap-chirp,
+html.dark .stream-item.gap-chirp,
+html.dark .stream-item:not(:hover).gap-chirp,
+html.dark .stream-item:not(.is-selected-tweet).gap-chirp {
+  color: #6a4643;
+  background: rgba(255, 255, 255, 0.5);
+}
+html .stream-item.gap-chirp::before, html .stream-item.gap-chirp::after,
+html .stream-item:not(:hover).gap-chirp::before,
+html .stream-item:not(:hover).gap-chirp::after,
+html .stream-item:not(.is-selected-tweet).gap-chirp::before,
+html .stream-item:not(.is-selected-tweet).gap-chirp::after,
+html.dark .stream-item.gap-chirp::before,
+html.dark .stream-item.gap-chirp::after,
+html.dark .stream-item:not(:hover).gap-chirp::before,
+html.dark .stream-item:not(:hover).gap-chirp::after,
+html.dark .stream-item:not(.is-selected-tweet).gap-chirp::before,
+html.dark .stream-item:not(.is-selected-tweet).gap-chirp::after {
+  display: none;
+}
+html .stream-item .tweet-action,
+html .stream-item:not(:hover) .tweet-action,
+html .stream-item:not(.is-selected-tweet) .tweet-action,
+html.dark .stream-item .tweet-action,
+html.dark .stream-item:not(:hover) .tweet-action,
+html.dark .stream-item:not(.is-selected-tweet) .tweet-action {
+  color: #ae827f !important;
+}
+html .stream-item .tweet-action:hover, html .stream-item .tweet-action.js-reply-action:hover,
+html .stream-item .tweet-action a[rel=actionsMenu]:hover,
+html .stream-item:not(:hover) .tweet-action:hover,
+html .stream-item:not(:hover) .tweet-action.js-reply-action:hover,
+html .stream-item:not(:hover) .tweet-action a[rel=actionsMenu]:hover,
+html .stream-item:not(.is-selected-tweet) .tweet-action:hover,
+html .stream-item:not(.is-selected-tweet) .tweet-action.js-reply-action:hover,
+html .stream-item:not(.is-selected-tweet) .tweet-action a[rel=actionsMenu]:hover,
+html.dark .stream-item .tweet-action:hover,
+html.dark .stream-item .tweet-action.js-reply-action:hover,
+html.dark .stream-item .tweet-action a[rel=actionsMenu]:hover,
+html.dark .stream-item:not(:hover) .tweet-action:hover,
+html.dark .stream-item:not(:hover) .tweet-action.js-reply-action:hover,
+html.dark .stream-item:not(:hover) .tweet-action a[rel=actionsMenu]:hover,
+html.dark .stream-item:not(.is-selected-tweet) .tweet-action:hover,
+html.dark .stream-item:not(.is-selected-tweet) .tweet-action.js-reply-action:hover,
+html.dark .stream-item:not(.is-selected-tweet) .tweet-action a[rel=actionsMenu]:hover {
+  color: #7b5d4d !important;
+}
+html .stream-item[data-key^=favorite] .js-show-detail, html .stream-item[data-key^=retweet] .js-show-detail,
+html .stream-item:not(:hover)[data-key^=favorite] .js-show-detail,
+html .stream-item:not(:hover)[data-key^=retweet] .js-show-detail,
+html .stream-item:not(.is-selected-tweet)[data-key^=favorite] .js-show-detail,
+html .stream-item:not(.is-selected-tweet)[data-key^=retweet] .js-show-detail,
+html.dark .stream-item[data-key^=favorite] .js-show-detail,
+html.dark .stream-item[data-key^=retweet] .js-show-detail,
+html.dark .stream-item:not(:hover)[data-key^=favorite] .js-show-detail,
+html.dark .stream-item:not(:hover)[data-key^=retweet] .js-show-detail,
+html.dark .stream-item:not(.is-selected-tweet)[data-key^=favorite] .js-show-detail,
+html.dark .stream-item:not(.is-selected-tweet)[data-key^=retweet] .js-show-detail {
+  padding-top: 6px;
+  padding-bottom: 0;
+  background: linear-gradient(to bottom, #fcfae5 0%, #fcfae5 65%, #f9f3b5 100%);
+  border-radius: 8px;
+  border: solid 2px #e1c152;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  opacity: 0.8;
+}
+html .stream-item[data-key^=favorite] .js-show-detail .tweet, html .stream-item[data-key^=retweet] .js-show-detail .tweet,
+html .stream-item:not(:hover)[data-key^=favorite] .js-show-detail .tweet,
+html .stream-item:not(:hover)[data-key^=retweet] .js-show-detail .tweet,
+html .stream-item:not(.is-selected-tweet)[data-key^=favorite] .js-show-detail .tweet,
+html .stream-item:not(.is-selected-tweet)[data-key^=retweet] .js-show-detail .tweet,
+html.dark .stream-item[data-key^=favorite] .js-show-detail .tweet,
+html.dark .stream-item[data-key^=retweet] .js-show-detail .tweet,
+html.dark .stream-item:not(:hover)[data-key^=favorite] .js-show-detail .tweet,
+html.dark .stream-item:not(:hover)[data-key^=retweet] .js-show-detail .tweet,
+html.dark .stream-item:not(.is-selected-tweet)[data-key^=favorite] .js-show-detail .tweet,
+html.dark .stream-item:not(.is-selected-tweet)[data-key^=retweet] .js-show-detail .tweet {
+  padding-left: 4px;
+  padding-right: 8px;
+}
+html .stream-item[data-key^=follow],
+html .stream-item:not(:hover)[data-key^=follow],
+html .stream-item:not(.is-selected-tweet)[data-key^=follow],
+html.dark .stream-item[data-key^=follow],
+html.dark .stream-item:not(:hover)[data-key^=follow],
+html.dark .stream-item:not(.is-selected-tweet)[data-key^=follow] {
+  background: linear-gradient(to bottom, #fcfae5 0%, #fcfae5 65%, #f9f3b5 100%);
+  border-radius: 8px;
   border: solid 2px #e1c152;
 }
-
-.tweet-context { margin-left: -36px; }
-
-.stream-item.is-selected-tweet {
-background-color: rgba(51,51,51,0.8);
+html .mdl,
+html.dark .mdl {
+  background: linear-gradient(to bottom, #fcfae5 0%, #fcfae5 65%, #f9f3b5 100%);
+  border: solid 2px #e1c152;
+  color: #7b5d4d;
+}
+html .mdl-dismiss,
+html.dark .mdl-dismiss {
+  color: #7b5d4d;
+}
+html .mdl-header, html .mdl-content,
+html.dark .mdl-header,
+html.dark .mdl-content {
+  color: #7b5d4d;
+}
+html .mdl-header-divider,
+html.dark .mdl-header-divider {
+  border-bottom: solid 1px #e1c152;
+}
+html .mdl .lst li,
+html.dark .mdl .lst li {
+  color: #7b5d4d;
+  border-bottom: solid 1px #e1c152;
+}
+html .mdl.s-full,
+html.dark .mdl.s-full {
+  /* Media Details Modal */
+}
+html .mdl .prf,
+html.dark .mdl .prf {
+  /* Profile Modal */
+}
+html .mdl .prf-header-inner-overlay,
+html.dark .mdl .prf-header-inner-overlay {
+  height: 100%;
+  background-image: none;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+html .mdl .prf-header .prf-siteurl,
+html.dark .mdl .prf-header .prf-siteurl {
+  color: #8e9956;
+}
+html .mdl .prf-header .prf-bio,
+html .mdl .prf-header .location,
+html.dark .mdl .prf-header .prf-bio,
+html.dark .mdl .prf-header .location {
+  color: #af907f;
+}
+html .mdl .prf-header .prf-bio a,
+html .mdl .prf-header .location a,
+html.dark .mdl .prf-header .prf-bio a,
+html.dark .mdl .prf-header .location a {
+  color: #ed649c;
+}
+html .mdl .prf .fullname,
+html .mdl .prf .username,
+html.dark .mdl .prf .fullname,
+html.dark .mdl .prf .username {
+  color: #ed649c;
+}
+html .mdl .prf .lst-profile a,
+html.dark .mdl .prf .lst-profile a {
+  border-right: 1px solid #e1c152;
+}
+html .mdl .prf .lst-profile a i,
+html .mdl .prf .lst-profile a span,
+html.dark .mdl .prf .lst-profile a i,
+html.dark .mdl .prf .lst-profile a span {
+  color: #7b5d4d;
+}
+html .mdl .prf .lst-profile a i:hover,
+html .mdl .prf .lst-profile a span:hover,
+html.dark .mdl .prf .lst-profile a i:hover,
+html.dark .mdl .prf .lst-profile a span:hover {
+  color: #6a4643;
+}
+html .mdl .prf-meta,
+html.dark .mdl .prf-meta {
+  border-bottom: solid 1px #e1c152;
+  border-top: solid 1px #e1c152;
+  background: transparent;
+}
+html .mdl .prf-meta .prf-stats,
+html.dark .mdl .prf-meta .prf-stats {
+  color: #7b5d4d;
+}
+html .mdl .prf-meta .prf-stats a,
+html.dark .mdl .prf-meta .prf-stats a {
+  color: #7b5d4d;
+}
+html .mdl .prf-meta .prf-stats a strong,
+html.dark .mdl .prf-meta .prf-stats a strong {
+  color: #6a4643;
+}
+html .mdl .prf-meta .prf-stats a strong:hover,
+html.dark .mdl .prf-meta .prf-stats a strong:hover {
+  color: #6a4643;
+}
+html .mdl .prf-meta .prf-stats a:hover,
+html.dark .mdl .prf-meta .prf-stats a:hover {
+  color: #6a4643;
+  background: rgba(255, 255, 255, 0.4);
+}
+html .mdl .prf-meta .prf-stats li + li a,
+html.dark .mdl .prf-meta .prf-stats li + li a {
+  border-left: solid 1px #e1c152;
+}
+html .mdl-column-med,
+html.dark .mdl-column-med {
+  background: transparent;
+}
+html .mdl-column-med .list-account .fullname,
+html .mdl-column-med .list-account .username,
+html.dark .mdl-column-med .list-account .fullname,
+html.dark .mdl-column-med .list-account .username {
+  color: #ed649c;
+}
+html .mdl .column-header-temp,
+html.dark .mdl .column-header-temp {
+  background: #d4e195;
+}
+html .mdl .column-header-temp .column-title .attribution,
+html.dark .mdl .column-header-temp .column-title .attribution {
+  color: #7b5d4d;
+}
+html .mdl .account-summary .item-img img,
+html.dark .mdl .account-summary .item-img img {
+  border-radius: 8px;
+  border: solid 2px #e1c152;
+}
+html .mdl .account-summary .account-bio,
+html.dark .mdl .account-summary .account-bio {
+  font-size: 13px !important;
+  color: #7b5d4d;
 }
 
-.column-number {
-    display: none;
-}
-
-.app-columns-container {
-  /* Old browsers */
-  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiBoZWlnaHQ9IjExNCIgdmlld0JveD0iMCAwIDgwIDExNCIgd2lkdGg9IjgwIiB2ZXJzaW9uPSIxLjEiPgo8cmVjdCBoZWlnaHQ9IjExNCIgd2lkdGg9IjgwIiB5PSIwIiB4PSIwIiBmaWxsPSIjZWNmNWJlIi8+CjxwYXRoIGZpbGw9IiNlMGVhOTUiIGQ9Im0wIDU3IDQwLTU3IDQwIDU3LTQwIDU3eiIvPgo8L3N2Zz4=");
-}
-
-.column-header, .mdl-column-rhs, .column-background-fill {
-    background: #d0e093;
-    border: none;
-
-}
-
-.mdl-column-rhs .stream-item .tweet { width: 245px; }
-
-.needs-scroll-bottom-offset.scroll-styled-h {
-    bottom: 0px;
-}
+/*# sourceMappingURL=TweetDeck_kkt.css.map */

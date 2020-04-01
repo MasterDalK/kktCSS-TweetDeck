@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import 'variables';
+
+html,
+html.dark {
+  /* Generic and large group Declarations */
+  p,
+  .color-twitter-dark-gray,
+  .compose-text {
+    color: $primary-text-color;
+  }
+
+  a,
+  .color-twitter-darker-gray,
+  .other-replies {
+    color: $dark-text-color;
+
+    .other-replies-link {
+      color: $ui-primary-color;
+    }
+  }
+
+  div { font-family: "Roboto"; -webkit-font-smoothing: none; }
+  h1 { font-family: "Segoe UI", "Roboto"; font-weight: bold; }
+
+  a[rel="hashtag"],
+  a[rel="user"],
+  .link-complex-target {
+    color: $ui-primary-color;
+  }
+
+  img.tweet-avatar,
+  img.avatar {
+    border-radius: 8px;
+    border: solid 2px $panel-border;
+  }
+
+/* Backgrounds */
+  .app-columns-container {
+    background: $base-color-diamonds;
+    background-attachment: fixed;
+  }
+
+  .app-header {
+    background: $highlight-color-diamonds;
+  }
+
+  .app-navigator,
+  .app-title,
+  .old-composer-footer {
+    background: transparent;
+  }
+
+  .bg-color-twitter-white {
+    background-color: $ui-base-color;
+  }
+
+  .column-panel,
+  .column,
+  .column-background-fill {
+    background: transparentize($ui-base-lighter-color, 0.7);
+  }
+
+/* Column general */
+  .column {
+    &-header {
+      background: desaturate(darken($ui-base-color, 12%),18%);
+      color: $primary-text-color;
+      border-bottom: none;
+
+      &-link {
+        color: $primary-text-color;
+      }
+
+      .column-type-icon {
+        color: $primary-text-color;
+      }
+    }
+
+    .with-column-divider-bottom {
+      border-color: $panel-border;
+    }
+
+    &-options {
+      background: #f6fae1;
+
+      .accordion {
+        color: $primary-text-color;
+
+        .facet-type {
+          border-color: $panel-border;
+
+          &.is-active {
+            background: transparent;
+          }
+
+          .accordion-header {
+            color: $primary-text-color;
+          }
+        }
+      }
+
+      .button-tray {
+        background-color: transparent;
+      }
+    }
+
+    .attribution {
+      color: $primary-text-color;
+    }
+
+    /* Detailed Conversations */
+    .scroll-conversation {
+      background: transparent;
+
+      .item-box {
+        margin-bottom: 3px;
+      }
+
+      .tweet {
+        &-detail {
+          &-wrapper {
+            background: $panel-background;
+            margin-top: 0;
+            border: solid 2px $panel-border;
+            padding-top: 4px;
+            margin-right: 2px;
+            border-radius: 8px;
+          }
+
+          &-actions {
+            border-top: 1px solid $panel-border;
+          }
+
+          &-action {
+            color: lighten($darker-text-color, 25%) !important;
+          }
+        }
+
+        &-stats {
+          border-top: 1px solid $panel-border;
+        }
+      }
+
+      .detail-view-inline {
+        border: none;
+        margin-top: 8px;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 !important;
+
+        &-text {
+          border: 1px solid $panel-border;
+          background-color: $ui-base-color;
+          color: $primary-text-color;
+        }
+      }
+
+      .inline-reply {
+        background-color: rgba(255,255,255,0.3);
+        color: $primary-text-color;
+      }
+    }
+
+    .thread {
+      background-color: $scrollbar-color;
+    }
+
+    &-nav { /* Sidebar */
+      &-item {
+        background: transparent;
+        color: $primary-text-color;
+        text-shadow: $panel-box-shadow;
+
+        &:hover {
+          text-shadow: none;
+        }
+      }
+
+      &-link,
+      &-updates {
+        color: $primary-text-color;
+      }
+    }
+  }
+
+  .is-new {
+    .column {
+      &-header {
+        .column-type-icon {
+          color: $ui-highlight-color;
+        }
+      }
+    }
+  }
+
+
+/* Sidebar (Remainder) */
+
+ .app {
+   &-search-fake {
+     color: $primary-text-color;
+     border: solid 1px $primary-text-color;
+   }
+
+   &-nav {
+    &-link,
+    &-tab {
+       color: $primary-text-color;
+       text-shadow: $panel-box-shadow;
+
+       &:hover {
+         color: $darker-text-color;
+         text-shadow: none;
+         background: rgba(255,255,255,0.5)
+       }
+     }
+   }
+ }
+
+ .Button,
+ button {
+   background-color: $ui-highlight-color;
+   border-color: $ui-highlight-color;
+   color: $darker-text-color;
+
+   &:hover {
+     background-color: lighten($ui-highlight-color, 10%);
+   }
+
+   &.Button {
+    &--primary,
+    &--link {
+       background-color: $ui-base-lighter-color;
+       border-color: $ui-base-lighter-color;
+       border-radius: 8px;
+
+       &.is-disabled {
+         background-color: desaturate($ui-base-lighter-color, 60%);
+         border-color: desaturate($ui-base-lighter-color, 60%);
+       }
+
+       &:hover {
+         background-color: lighten($ui-base-lighter-color, 10%);
+         border-color: $ui-base-lighter-color;
+       }
+     }
+   }
+ }
+
+ .btn-on-blue {
+   background-color: desaturate(darken($ui-base-color, 12%),18%);
+   color: $primary-text-color;
+
+   &:hover {
+     background-color: darken($ui-base-color, 20%);
+     color: $primary-text-color;
+   }
+
+   &:active {
+     background-color: darken($ui-base-color, 30%);
+     color: $primary-text-color;
+     box-shadow: none;
+   }
+ }
+
+ .btn-on-dark {
+   background-color: $ui-highlight-color;
+
+   &:hover {
+     background-color: darken($ui-highlight-color, 10%);
+     color: #FFF;
+     box-shadow: none;
+   }
+
+   &:active {
+     background-color: darken($ui-highlight-color, 10%);
+     color: #FFF;
+     box-shadow: none;
+   }
+ }
+
+ .compose {
+   background: $highlight-color-diamonds;
+   color: $primary-text-color;
+
+   &-accounts {
+     .compose-account img {
+       border-radius: 8px;
+       border: solid 2px $panel-border;
+     }
+   }
+
+   &-text-title,
+   &-message-header {
+     color: $darker-text-color;
+   }
+ }
+
+ .attach-compose-buttons {
+   button.tweet-button,
+   .Button.tweet-button {
+     background: rgba(255,255,255,0.4);
+     color: $darker-text-color;
+   }
+ }
+
+/* Muted Text */
+  .txt-mute,
+  .stat-word {
+    color: lighten($dark-text-color, 15%);
+
+    p {
+      color: lighten($primary-text-color, 15%);
+    }
+
+    &.username { /* NOT ACTUALLY MUTED */
+      color: $dark-text-color;
+    }
+
+    a {
+      color: lighten($dark-text-color, 15%);
+    }
+
+    a[rel="user"],
+    a:not(:hover):not(:focus),
+    .link-complex-target {
+      color: lighten($ui-primary-color, 15%);
+    }
+  }
+
+/* Statuses */
+  .item-box {
+    padding: 4px 10px;
+    margin-bottom: 6px;
+
+    &-full-bleed.js-media.margin-tm {
+      margin: -20px -10px 0px !important;
+      border-bottom: solid 2px $panel-border;
+    }
+
+    .margin-tm {
+      margin-top: 0 !important;
+    }
+
+    .margin-t--20 {
+      margin-top: 0;
+    }
+  }
+
+  .stream-item,
+  .stream-item:not(:hover),
+  .stream-item:not(.is-selected-tweet) {
+    background: transparent;
+    border-bottom: none;
+
+    .nbfc {
+      color: $dark-text-color;
+    }
+
+    .tweet {
+      padding-top: 6px;
+      padding-bottom: 4px;
+      margin-right: -6px;
+      background: $panel-background;
+      border-radius: 8px;
+      border: solid 2px $panel-border;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+
+      &-footer {
+        margin-top: 1px;
+        margin-bottom: 2px;
+      }
+
+      &-img {
+        margin-left: -42px;
+      }
+
+      &-avatar {
+        border-radius: 8px;
+        border: solid 2px $panel-border;
+      }
+
+      &-timestamp {
+        margin-right: 5px;
+        a {
+          color: $dark-text-color;
+        }
+      }
+
+      &-body {
+        margin-right: 5px;
+        margin-bottom: 3px;
+        font-size: 14px;
+
+      }
+
+      &-message {
+        .l-table {
+          margin-top: -20px;
+        }
+      }
+    }
+
+    .quoted-tweet {
+      border: solid 1px $panel-border;
+      border-color: $panel-border;
+    }
+
+    &.gap-chirp {
+      color: $darker-text-color;
+      background: rgba(255,255,255,0.5);
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    .tweet-action {
+      color: lighten($darker-text-color, 25%) !important;
+
+      &:hover,
+      &.js-reply-action:hover,
+      a[rel="actionsMenu"]:hover {
+        color: $primary-text-color !important;
+      }
+    }
+
+    &[data-key^="favorite"],
+    &[data-key^="retweet"] {
+      .js-show-detail {
+        padding-top: 6px;
+        padding-bottom: 0;
+        background: $panel-background;
+        border-radius: 8px;
+        border: solid 2px $panel-border;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+        opacity: 0.8;
+
+        .tweet {
+          padding-left: 4px;
+          padding-right: 8px;
+        }
+      }
+    }
+
+    &[data-key^="follow"] {
+      background: $panel-background;
+      border-radius: 8px;
+      border: solid 2px $panel-border;
+    }
+  }
+
+/* Modals & Profiles */
+
+  .mdl {
+    background: $panel-background;
+    border: solid 2px $panel-border;
+    color: $primary-text-color;
+
+    &-dismiss {
+      color: $primary-text-color;
+    }
+
+    &-header,
+    &-content {
+      color: $primary-text-color;
+    }
+
+    &-header-divider {
+      border-bottom: solid 1px $panel-border;
+    }
+
+    .lst li {
+      color: $primary-text-color;
+      border-bottom: solid 1px $panel-border;
+    }
+
+    &.s-full { /* Media Details Modal */
+
+    }
+
+    .prf { /* Profile Modal */
+      &-header {
+        &-inner-overlay {
+          height: 100%;
+          background-image: none;
+          background-color: rgba(0,0,0,0.3);
+        }
+
+        .prf-siteurl {
+          color: $dark-text-color;
+        }
+
+        .prf-bio,
+        .location {
+          color: lighten($primary-text-color, 20%);
+
+          a {
+            color: $ui-primary-color;
+          }
+        }
+      }
+
+      .fullname,
+      .username {
+        color: $ui-primary-color;
+      }
+
+      .lst-profile {
+        a {
+          border-right: 1px solid $panel-border;
+
+          i,
+          span {
+            color: $primary-text-color;
+
+            &:hover {
+              color: $darker-text-color;
+            }
+          }
+        }
+      }
+
+      &-meta {
+        border-bottom: solid 1px $panel-border;
+        border-top: solid 1px $panel-border;
+        background: transparent;
+
+        .prf-stats {
+          color: $primary-text-color;
+          a {
+            color: $primary-text-color;
+
+            strong {
+              color: $darker-text-color;
+
+              &:hover {
+                color: $darker-text-color;
+              }
+            }
+
+            &:hover {
+              color: $darker-text-color;
+              background: rgba(255,255,255,0.4);
+            }
+          }
+
+          li+li a {
+            border-left: solid 1px $panel-border;
+          }
+        }
+      }
+    }
+
+    &-column-med {
+      background: transparent;
+
+      .list-account {
+        .fullname,
+        .username {
+          color: $ui-primary-color;
+        }
+      }
+    }
+
+    .column-header-temp {
+      background: desaturate(darken($ui-base-color, 12%),18%);
+
+      .column-title .attribution {
+        color: $primary-text-color;
+      }
+    }
+
+    .account {
+      &-summary {
+        .item-img img {
+          border-radius: 8px;
+          border: solid 2px $panel-border;
+        }
+
+        .account-bio {
+          font-size: 13px !important;
+          color: $primary-text-color;
+        }
+      }
+    }
+  }
+/* END */
+}
