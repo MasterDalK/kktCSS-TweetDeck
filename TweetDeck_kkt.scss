@@ -12,11 +12,17 @@ html.dark {
 
   a,
   .color-twitter-darker-gray,
-  .other-replies {
-    color: $dark-text-color;
+  .other-replies,
+  .facet-subtitle {
+    color: $dark-text-color !important;
+
+    &:hover {
+      color: $dark-text-color;
+      text-decoration: underline;
+    }
 
     .other-replies-link {
-      color: $ui-primary-color;
+      color: $ui-primary-color !important;
     }
   }
 
@@ -25,8 +31,9 @@ html.dark {
 
   a[rel="hashtag"],
   a[rel="user"],
-  .link-complex-target {
-    color: $ui-primary-color;
+  .link-complex-target,
+  .color-twitter-blue {
+    color: $ui-primary-color !important;
   }
 
   img.tweet-avatar,
@@ -35,8 +42,26 @@ html.dark {
     border: solid 2px $panel-border;
   }
 
+  .media-caret {
+    border-top-color: $ui-highlight-color;
+  }
+
+  .reply-triangle {
+    border-bottom-color: $ui-highlight-color;
+  }
+
+  .icon-follow-color {
+    color: $ui-highlight-color;
+  }
+
+  .media-item.media-size-large:after,
+  .media-size-large-height:after {
+    display: none;
+  }
+
 /* Backgrounds */
-  .app-columns-container {
+  .app-columns-container,
+  .app-content {
     background: $base-color-diamonds;
     background-attachment: fixed;
   }
@@ -47,7 +72,8 @@ html.dark {
 
   .app-navigator,
   .app-title,
-  .old-composer-footer {
+  .old-composer-footer,
+  .scroll-conversation {
     background: transparent;
   }
 
@@ -61,8 +87,17 @@ html.dark {
     background: transparentize($ui-base-lighter-color, 0.7);
   }
 
+  .drawer-header {
+    background: $highlight-color-diamonds !important;
+    color: $darker-text-color;
+  }
+
 /* Column general */
   .column {
+    &-message {
+      background: desaturate(darken($ui-base-color, 5%),18%);
+    }
+
     &-header {
       background: desaturate(darken($ui-base-color, 12%),18%);
       color: $primary-text-color;
@@ -109,60 +144,6 @@ html.dark {
       color: $primary-text-color;
     }
 
-    /* Detailed Conversations */
-    .scroll-conversation {
-      background: transparent;
-
-      .item-box {
-        margin-bottom: 3px;
-      }
-
-      .tweet {
-        &-detail {
-          &-wrapper {
-            background: $panel-background;
-            margin-top: 0;
-            border: solid 2px $panel-border;
-            padding-top: 4px;
-            margin-right: 2px;
-            border-radius: 8px;
-          }
-
-          &-actions {
-            border-top: 1px solid $panel-border;
-          }
-
-          &-action {
-            color: lighten($darker-text-color, 25%) !important;
-          }
-        }
-
-        &-stats {
-          border-top: 1px solid $panel-border;
-        }
-      }
-
-      .detail-view-inline {
-        border: none;
-        margin-top: 8px;
-        margin-bottom: 0;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 0 !important;
-
-        &-text {
-          border: 1px solid $panel-border;
-          background-color: $ui-base-color;
-          color: $primary-text-color;
-        }
-      }
-
-      .inline-reply {
-        background-color: rgba(255,255,255,0.3);
-        color: $primary-text-color;
-      }
-    }
-
     .thread {
       background-color: $scrollbar-color;
     }
@@ -180,7 +161,7 @@ html.dark {
 
       &-link,
       &-updates {
-        color: $primary-text-color;
+        color: $primary-text-color !important;
       }
     }
   }
@@ -195,6 +176,58 @@ html.dark {
     }
   }
 
+  /* Detailed Conversations */
+  .js-detail-content {
+    background: transparentize($ui-base-lighter-color, 0.5);
+
+    .item-box {
+      margin-bottom: 3px;
+    }
+
+    .tweet {
+      &-detail {
+        &-wrapper {
+          background: $panel-background;
+          margin-top: 0;
+          border: solid 2px $panel-border;
+          padding-top: 4px;
+          margin-right: 2px;
+          border-radius: 8px;
+        }
+
+        &-actions {
+          border-top: 1px solid $panel-border;
+        }
+
+        &-action {
+          color: lighten($darker-text-color, 25%) !important;
+        }
+      }
+
+      &-stats {
+        border-top: 1px solid $panel-border;
+      }
+    }
+
+    .detail-view-inline {
+      border: none;
+      margin-top: 8px;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0 !important;
+
+      &-text {
+        border: 1px solid $panel-border;
+        background-color: $ui-base-color;
+        color: $primary-text-color;
+      }
+    }
+
+    .inline-reply {
+      margin-top: 9px;
+    }
+  }
 
 /* Sidebar (Remainder) */
 
@@ -207,13 +240,18 @@ html.dark {
    &-nav {
     &-link,
     &-tab {
-       color: $primary-text-color;
+       color: $primary-text-color !important;
        text-shadow: $panel-box-shadow;
 
        &:hover {
          color: $darker-text-color;
          text-shadow: none;
          background: rgba(255,255,255,0.5)
+       }
+
+       &.is-selected {
+         background: rgba(255,255,255,0.3);
+         text-shadow: none;
        }
      }
    }
@@ -235,6 +273,7 @@ html.dark {
        background-color: $ui-base-lighter-color;
        border-color: $ui-base-lighter-color;
        border-radius: 8px;
+       color: $primary-text-color;
 
        &.is-disabled {
          background-color: desaturate($ui-base-lighter-color, 60%);
@@ -242,9 +281,35 @@ html.dark {
        }
 
        &:hover {
-         background-color: lighten($ui-base-lighter-color, 10%);
-         border-color: $ui-base-lighter-color;
+         background-color: darken($ui-base-color, 20%);
        }
+     }
+   }
+
+   &.btn-options {
+     &-tray {
+       color: $primary-text-color !important;
+       &:hover,
+       &:focus {
+         color: $darker-text-color !important;
+       }
+     }
+   }
+
+   &.btn-on-dark {
+     background-color: $ui-highlight-color;
+
+     &:hover {
+       background-color: darken($ui-highlight-color, 10%);
+       color: #FFF;
+       box-shadow: none;
+     }
+
+     &:active,
+     &:focus {
+       background-color: darken($ui-highlight-color, 10%);
+       color: #FFF;
+       box-shadow: none;
      }
    }
  }
@@ -253,7 +318,8 @@ html.dark {
    background-color: desaturate(darken($ui-base-color, 12%),18%);
    color: $primary-text-color;
 
-   &:hover {
+   &:hover,
+   &:focus {
      background-color: darken($ui-base-color, 20%);
      color: $primary-text-color;
    }
@@ -265,25 +331,13 @@ html.dark {
    }
  }
 
- .btn-on-dark {
-   background-color: $ui-highlight-color;
-
-   &:hover {
-     background-color: darken($ui-highlight-color, 10%);
-     color: #FFF;
-     box-shadow: none;
-   }
-
-   &:active {
-     background-color: darken($ui-highlight-color, 10%);
-     color: #FFF;
-     box-shadow: none;
-   }
- }
-
  .compose {
    background: $highlight-color-diamonds;
    color: $primary-text-color;
+
+   &-header {
+     border-color: $panel-border;
+   }
 
    &-accounts {
      .compose-account img {
@@ -335,9 +389,36 @@ html.dark {
     padding: 4px 10px;
     margin-bottom: 6px;
 
-    &-full-bleed.js-media.margin-tm {
-      margin: -20px -10px 0px !important;
-      border-bottom: solid 2px $panel-border;
+    &-full-bleed.js-media.margin-tm { /* "Large Media" */
+      margin: -8px -1px 0px !important;
+      border: solid 2px $panel-border;
+      border-radius: 8px;
+      background: $panel-background;
+      width: 100%;
+
+      .media {
+        &-caret {
+          top: 0;
+        }
+
+        &-grid-{
+          &2,
+          &2-mirror,
+          &3,
+          &3-mirror,
+          &4 {
+            .media-image {
+              border-radius: 8px;
+            }
+          }
+        }
+
+        &-size {
+          &-large {
+            border-radius: 8px;
+          }
+        }
+      }
     }
 
     .margin-tm {
@@ -345,7 +426,7 @@ html.dark {
     }
 
     .margin-t--20 {
-      margin-top: 0;
+      margin-top: 0 !important;
     }
   }
 
@@ -362,11 +443,16 @@ html.dark {
     .tweet {
       padding-top: 6px;
       padding-bottom: 4px;
-      margin-right: -6px;
+      margin-right: -9px;
+      margin-left: -9px;
       background: $panel-background;
       border-radius: 8px;
       border: solid 2px $panel-border;
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+
+      &-header {
+        padding-left: 3px;
+      }
 
       &-footer {
         margin-top: 1px;
@@ -374,7 +460,7 @@ html.dark {
       }
 
       &-img {
-        margin-left: -42px;
+        margin-left: -45px;
       }
 
       &-avatar {
@@ -390,10 +476,9 @@ html.dark {
       }
 
       &-body {
+        padding-left: 3px;
         margin-right: 5px;
         margin-bottom: 3px;
-        font-size: 14px;
-
       }
 
       &-message {
@@ -401,6 +486,12 @@ html.dark {
           margin-top: -20px;
         }
       }
+    }
+
+    .inline-reply {
+      background-color: rgba(255,255,255,0.3);
+      color: $primary-text-color;
+      margin-top: 0;
     }
 
     .quoted-tweet {
@@ -439,9 +530,18 @@ html.dark {
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
         opacity: 0.8;
 
+        .activity-header {
+          margin-left: -30px;
+        }
+
         .tweet {
           padding-left: 4px;
           padding-right: 8px;
+
+          &-img {
+            margin-left: 215px;
+            margin-top: -25px;
+          }
         }
       }
     }
@@ -450,6 +550,15 @@ html.dark {
       background: $panel-background;
       border-radius: 8px;
       border: solid 2px $panel-border;
+      margin-bottom: 6px;
+
+      .account-bio {
+        color: $primary-text-color !important;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
   }
 
@@ -502,6 +611,10 @@ html.dark {
             color: $ui-primary-color;
           }
         }
+      }
+
+      .social-proof-container {
+        border-bottom: solid 1px $panel-border;
       }
 
       .fullname,
@@ -566,11 +679,25 @@ html.dark {
       }
     }
 
+    &-column-rhs,
+    &-content {
+      border-color: $panel-border;
+    }
+
     .column-header-temp {
       background: desaturate(darken($ui-base-color, 12%),18%);
+      border-color: $panel-border;
 
       .column-title .attribution {
         color: $primary-text-color;
+      }
+    }
+
+    .lst-launcher {
+      a {
+        span {
+          color: $ui-primary-color;
+        }
       }
     }
 
@@ -582,11 +709,94 @@ html.dark {
         }
 
         .account-bio {
-          font-size: 13px !important;
           color: $primary-text-color;
         }
       }
     }
+
+    .frm { /* Settings Modal */
+      color: $primary-text-color;
+
+      .list-filter {
+        color: $primary-text-color;
+      }
+    }
   }
-/* END */
+
+  /* Dropdown Menu & Search */
+  .dropdown-menu,
+  .popover {
+    background-color: lighten($ui-highlight-color, 25%);
+
+    .list-item {
+      color: $primary-text-color;
+    }
+
+    li {
+      a {
+        color: $primary-text-color !important;
+      }
+    }
+
+    .is-selected {
+      background-color: lighten($ui-highlight-color, 10%);
+      color: $darker-text-color;
+    }
+
+    .drp-h-divider {
+      border-bottom: solid 1px $panel-border;
+    }
+  }
+
+  input,
+  .column-title-edit-box {
+    border: 1px solid $panel-border;
+    background-color: $ui-base-color;
+    color: $primary-text-color;
+
+    &:active,
+    &:focus {
+      border-color: lighten($panel-border, 10%);
+      box-shadow: inset 0 1px 3px rgba(20,23,26,.1), 0 0 8px $panel-shadow;
+    }
+  }
+
+  /* Account Pullout */
+  .account-settings-row {
+    background: $panel-background;
+  }
+
+  .js-account-settings-team-info {
+    color: $darker-text-color !important;
+    background: desaturate(darken($ui-base-color, 12%),18%);
+  }
+
+  .js-account-settings-scroll-container {
+    .nbfc {
+      p {
+        color: $primary-text-color !important;
+      }
+    }
+  }
+
+  /* Scrollbar */
+  .scroll-styled-v,
+  .scroll-styled-h {
+    ::-webkit-scrollbar-thumb {
+      background: $scrollbar-color;
+      border-radius: 50px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover,
+    ::-webkit-scrollbar-thumb:active {
+      background: lighten($scrollbar-color, 10%);
+    }
+
+    ::-webkit-scrollbar-track:hover,
+    ::-webkit-scrollbar-track:active {
+      background: rgba(0,0,0, 0.2);
+    }
+  }
+
+  /* END */
 }
