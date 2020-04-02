@@ -1,19 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-html,
-html.dark {
-  /* Generic and large group Declarations */
-  /* Backgrounds */
-  /* Column general */
-  /* Detailed Conversations */
-  /* Sidebar (Remainder) */
-  /* Muted Text */
-  /* Statuses */
-  /* Modals & Profiles */
-  /* Dropdown Menu & Search */
-  /* Account Pullout */
-  /* Scrollbar */
-  /* END */
-}
+
+/* Created by Salil Gupta tw/KKT: @MasterDalK */
+/* Join the Aikatsu Community on kirakiratter.com! */
+/* アイカツ！のみんなさんと一緒に話しましょう、kirakiratter.com で！*/
+
 html p,
 html .color-twitter-dark-gray,
 html .compose-text,
@@ -189,10 +179,6 @@ html.dark .column .attribution {
 html .column .thread,
 html.dark .column .thread {
   background-color: #7b5d4d;
-}
-html .column-nav,
-html.dark .column-nav {
-  /* Sidebar */
 }
 html .column-nav-item,
 html.dark .column-nav-item {
@@ -769,14 +755,6 @@ html.dark .mdl .lst li {
   color: #7b5d4d;
   border-bottom: solid 1px #e1c152;
 }
-html .mdl.s-full,
-html.dark .mdl.s-full {
-  /* Media Details Modal */
-}
-html .mdl .prf,
-html.dark .mdl .prf {
-  /* Profile Modal */
-}
 html .mdl .prf-header-inner-overlay,
 html.dark .mdl .prf-header-inner-overlay {
   height: 100%;
@@ -991,5 +969,3 @@ html.dark .scroll-styled-h ::-webkit-scrollbar-track:hover,
 html.dark .scroll-styled-h ::-webkit-scrollbar-track:active {
   background: rgba(0, 0, 0, 0.2);
 }
-
-/*# sourceMappingURL=TweetDeck_kkt.css.map */
